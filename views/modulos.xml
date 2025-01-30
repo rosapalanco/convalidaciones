@@ -1,0 +1,59 @@
+<odoo>
+    <data>
+
+
+        <record model="ir.ui.view" id="convalidaciones.list_modulos_form">
+            <field name="name">convalidaciones.modulos.listado.form</field>
+            <field name="model">convalidaciones.modulo</field>
+            <field name="arch" type="xml">
+                <form string="Ventana del Modulo">
+                    <sheet>
+                        <field name="name"/>
+                        <field name="descripcion"/>
+                        <field name="ciclo_ids"/>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- menu categories -->
+        <menuitem name="Modulos" id="convalidaciones.modulos" parent="convalidaciones.menu_root"/>
+
+        <!-- actions -->
+        <record model="ir.actions.act_window" id="convalidaciones.action_window_modulos">
+            <field name="name">Listado de Módulos</field>
+            <field name="res_model">convalidaciones.modulo</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Listado" id="convalidaciones.modulos_list" parent="convalidaciones.modulos"
+                  action="convalidaciones.action_window_modulos"/>
+
+ 
+        <!-- server action to the one above
+
+        <record model="ir.actions.server" id="convalidaciones.action_server">
+            <field name="name">convalidaciones server</field>
+            <field name="model_id" ref="model_convalidaciones_convalidaciones"/>
+            <field name="state">code</field>
+            <field name="code">
+                action = {
+                "type": "ir.actions.act_window",
+                "view_mode": "tree,form",
+                "res_model": model._name,
+                }
+            </field>
+        </record>
+         -->
+
+
+        <!-- menu categories -->
+        <menuitem name="Modulos" id="convalidaciones.modulos" parent="convalidaciones.menu_root"/>
+
+        <!-- actions -->
+        <menuitem name="Listado" id="convalidaciones.modulos_list" parent="convalidaciones.modulos"
+                  action="convalidaciones.action_window_modulos"/>
+
+
+    </data>
+</odoo>
