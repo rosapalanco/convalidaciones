@@ -3,14 +3,14 @@
     'name': "convalidaciones",
 
     'summary': """
-        Ejemploooooo que nos permite gestionar las convalidaciones de un instituto.
+        Ejemplo que nos permite gestionar las convalidaciones de un instituto.
         """,
 
     'description': """
         Aqui la descripcion mas larga del modulo
     """,
 
-    'author': "Jose Luis",
+    'author': "Rosa",
     'website': "https://ieslamarisma.net/",
 
     # Categories can be used to filter modules in modules listing
